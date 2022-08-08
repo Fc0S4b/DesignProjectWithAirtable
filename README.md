@@ -1,3 +1,5 @@
+## Gatsby Project with Airtable and Algolia from John Smilga's Course on [udemy](https://www.udemy.com/share/101Zim3@L0Gl5OAhp89E8Ir48EFlRM2SlBAeUSHAr13thlfz6G7FETW2G8Gp2V0LA0OdCKdGXA==/)
+
 ## Setup
 
 ## Styled Components
