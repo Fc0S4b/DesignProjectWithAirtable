@@ -15,6 +15,18 @@ const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY
 )
 
+const NewHits = connectHits(({ hits }) => {
+  return hits.map(item => {
+    const { objectID, image, name } = item
+    return (
+      <article key={objectID}>
+        <GatsbyImage image={image} className="img" alt={name} />
+        <h4>{name}</h4>
+      </article>
+    )
+  })
+})
+
 const Search = () => {
   return (
     <Wrapper>
@@ -24,7 +36,9 @@ const Search = () => {
         searchClient={searchClient}
       >
         <SearchBox />
-        <Hits />
+        <Container className="section-center">
+          <NewHits />
+        </Container>
       </InstantSearch>
     </Wrapper>
   )
